@@ -1,0 +1,126 @@
+:root{
+    --backgroundColor:#379683;
+    --buttonColor:#8EE4AF;
+    --highlightColor:#5CDB95;
+    --borderTextColor:#05386B;
+    --currentCircleColor:goldenrod;
+    --arrowHighlightColor:goldenrod;
+    --frameWidth:50vw;
+    --frameHeight:calc(var(--frameWidth) * 3 / 4);
+    --creditColor: darkslategray;
+    --titleColor:#05386B;
+    --borderRadius:15px;
+}
+
+body{
+    display:flex;
+    background-color:var(--backgroundColor);
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+h1{
+    color:var(--titleColor);
+    font-weight:bold;
+}
+
+.frame{
+    width:var(--frameWidth);
+    height:var(--frameHeight);
+    display:flex;
+    flex:auto;
+    border: 4px solid var(--borderTextColor);
+    border-radius:var(--borderRadius);
+    background-color:var(--borderTextColor);
+}
+
+#creditBar{
+    margin:10px 0px 15px 0px;
+    font-style:italic;
+    font-weight:bold;
+    color:var(--creditColor);
+}
+
+a{
+    color:var(--creditColor);
+}
+
+.photo{
+    width:var(--frameWidth);
+    height:var(--frameHeight);
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:flex;
+    position:center;
+    margin:0px 0px 15px 0px;
+    border-radius:var(--borderRadius);
+    transition-property:opacity;
+    transition-duration:1.5s;
+    opacity:100%;
+    position:absolute;
+}
+
+#slider{
+    display:flex;
+    position:relative;
+    background-color:var(--borderTextColor);
+}
+
+#navBar{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap:5px;
+    width:70vw;
+}
+
+.circle{
+    border: 2px solid var(--borderTextColor);
+    height:4vh;
+    width:4vh;
+    border-radius:2vh;
+    background-color: var(--buttonColor);
+    display:flex;
+    flex:none;
+}
+
+.currentCircle{
+    background-color:var(--currentCircleColor);
+}
+
+.circle:hover{
+    background-color:var(--highlightColor);
+    cursor: pointer;
+}
+
+.lArrow,.rArrow{
+    border: 2px solid var(--borderTextColor);
+    height:4vh;
+    width:4vh;
+    border-radius: 1vh;
+    background-color: var(--highlightColor);
+}
+
+.lArrow:hover,.rArrow:hover{
+    background-color:var(--arrowHighlightColor);
+    cursor:pointer;
+}
+
+.tab{
+    background-color:var(--tabColor);
+    color:var(--borderTextColor);
+    border: var(--dropdownBorder) solid var(--borderTextColor);
+    width:var(--tabWidth);
+    border-radius: var(--tabTopRadius) var(--tabTopRadius) 0 0;
+    font-weight:bold;
+    text-align:center;
+}
+
+.hidden{
+    opacity:0%;
+}
+
+.hiddenCredit{
+    display:none;
+}
